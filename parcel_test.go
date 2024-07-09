@@ -49,6 +49,7 @@ func TestAddGetDelete(t *testing.T) {
 	require.NoError(t, err)
 	require.NotEmpty(t, id)
 	assert.Greater(t, id, 0)
+	parcel.Number = id
 
 	// get
 	stored, err := store.Get(id)
